@@ -1,8 +1,8 @@
 # SmartCart
 
-SmartCart is a computer-vision-assisted checkout prototype. It processes demonstration videos with a YOLO object-detection model and ByteTrack tracking, infers when supported products are picked up or returned, and keeps a live digital cart synchronized with a browser dashboard.
+SmartCart is a computer-vision-assisted checkout prototype that processes demonstration videos using a YOLO object-detection model and ByteTrack for object tracking. It identifies when supported products are picked up or returned and automatically maintains a synchronized digital cart through a browser-based dashboard.
 
-The prototype currently supports one physical unit of each product:
+The prototype currently supports one physical unit of each of the following products:
 
 - Everest
 - Mayo
