@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>SmartCart</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- HEADER -->
+    <header class="header">
+        <div>
+            <div class="brand">SMART CART</div>
+            <div class="subtitle">
+                Computer Vision Assisted Checkout
+            </div>
+        </div>
+
+        <div id="connectionStatus" class="connection disconnected">
+            <span class="status-dot"></span>
+            Disconnected
+        </div>
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-grid">
+
+        <!-- LEFT: VIDEO -->
+        <section class="video-panel">
+
+            <div class="panel-header">
+                <div>
+                    <h2>Live Vision</h2>
+                    <p>YOLO26n + ByteTrack</p>
+                </div>
+
+                <select id="videoSelector">
+                    <option value="">
+                        Select demonstration video
+                    </option>
+                </select>
+            </div>
+
+            <div class="video-container">
+
+                <div id="videoPlaceholder" class="video-placeholder">
+                    <div class="placeholder-icon">▶</div>
+                    <div>Select a demonstration video</div>
+                </div>
+
+                <img
+                    id="videoFeed"
+                    class="video-feed hidden"
+                    alt="SmartCart computer vision feed"
+                >
+
+                <div class="video-overlay">
+                    <span id="cvStatus">CV ENGINE OFF</span>
+                </div>
+
+            </div>
+
+            <div class="video-controls">
+
+                <button id="startVideoButton" class="primary-button">
+                    Start Demo
+                </button>
+
+                <button id="stopVideoButton" class="secondary-button">
+                    Stop
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- RIGHT: CART -->
+        <section class="cart-panel">
+
+            <div class="cart-header">
+                <div>
+                    <h2>Your Cart</h2>
+                    <p>Live digital receipt</p>
+                </div>
+
+                <button
+                    id="resetCartButton"
+                    class="reset-button"
+                >
+                    Reset
+                </button>
+            </div>
+
+
+            <!-- LAST EVENT -->
+            <div class="event-card">
+
+                <div class="event-label">
+                    LAST EVENT
+                </div>
+
+                <div id="lastEvent" class="last-event">
+                    Waiting for activity
+                </div>
+
+                <div id="lastTrack" class="track-info">
+                    Track ID: —
+                </div>
+
+            </div>
+
+
+            <!-- CART ITEMS -->
+            <div id="cartItems" class="cart-items">
+            </div>
+
+
+            <!-- SUMMARY -->
+            <div class="cart-summary">
+
+                <div class="summary-row">
+                    <span>Items</span>
+                    <strong id="totalItems">0</strong>
+                </div>
+
+                <div class="summary-row total-row">
+                    <span>Total</span>
+                    <strong id="total">₹—</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="/static/app.js"></script>
+
+</body>
+</html>
